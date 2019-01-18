@@ -2,9 +2,13 @@
 
 SAP MultiCloud Platform is an open platform-as-a-service (PaaS) product that provides core platform and backing services, for building and extending cloud applications on multiple cloud infrastructure providers.
 
-    SAP MultiCloud Platform presently supports AWS, OpenStack, Azure and GCP.
+    One of the core services provided by SCP is PostgreSQL as a Service (PostgreSQL-as-a-Service). Each PostgreSQL-as-a-Service instance consists of 5 VMs - Postgres-Master, Postgres-Standby and 3-PGPOOL VMs. Data is replicated asynchronously from Postgres-Master to Postgres-Standby.
 
-### Highly Available Postgresql Cluster
+SCP manages more than 10000 PostgreSQL-as-a-Service instances across multiple IAASs. 
+
+Multi-tenancy in Postgresql-as-a-service can be achieved through separate schema or database. Databases has various advantages over schemas with regard to multi-tenancy like better security and isolation, extension enablement, connnection control etc. SCP creates different databases(tenant-database) that run inside postgreSQL cluster.
+
+### 
 
 One of the core services provided by SAP MultiCloud Platform is PostgreSQL-as-a-Service.
 
