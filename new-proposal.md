@@ -6,7 +6,7 @@ SAP Cloud Platform is an open platform-as-a-service (PaaS) product that provides
 
 SCP manages more than 2400 MT-PostgreSQL-as-a-Service instances across multiple IAASs. 
 
-MT-PostgreSQL-as-a-Service is materialized in SCP by defining database as the Multi-Tenant-Unit whereby each tenant is encapsulated into a database. Logical dbs in PostgreSQL provides clear advantages like isolation, extension enablement, connection control, higher security which makes it the ideal choice as MTU.
+MT-PostgreSQL-as-a-Service is materialized in SCP by defining database as the Multi-Tenant-Unit(MTU) whereby each tenant is encapsulated into a database. Logical dbs in PostgreSQL provides clear advantages like isolation, extension enablement, connection control, higher security which makes it the ideal choice as MTU.
 
 ### Tenant Admission Control
  
