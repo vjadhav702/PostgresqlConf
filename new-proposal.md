@@ -8,6 +8,12 @@ SCP manages more than 2400 MT-PostgreSQL-as-a-Service instances across multiple 
 
 MT-PostgreSQL-as-a-Service is materialized in SCP by defining database as the Multi-Tenant-Unit(MTU) whereby each tenant is encapsulated into a database. Logical dbs in PostgreSQL provides clear advantages like isolation, extension enablement, connection control, higher security which makes it the ideal choice as MTU.
 
+### Security and Isolation
+A separate membership role is created for each tenant database. Cloud applications are provided with separate username and password to access tenant databases. Tenant users are only entitled to connect to their own database. Privileges for database and role creation are not provided to tenant users.
+ 
+An applications connected to a tenant database cannot perform any operation on objects of another tenant database co-located on the same postgresql instance.  
+
+
 ### Tenant Admission Control
  
 Available disk is a key factor for successful tenant creation. To prevent process from crashing, 90% disk full is used as a limiting factor, beyond which writes will be blocked. Requirement for successful tenant creation is to have some disk free e.g. 5 GB in addition to 10% of free disk to avoid running out of disk immediately after creation.
@@ -28,7 +34,14 @@ Multitenant-Postgresql-as-a-Service supports tenant based health monitoring. Mon
 
 The monitoring agent collects this information and reports it to centralized monitoring server, which stores in a time-series-database. A monitoring-web-application shows metrics via various charts so that devops can identify the tenant health at any given time-date range.
 
+![N|Solid](https://github.com/ankita0811/PostgresqlConf/blob/master/database_scans_rows.png?raw=true)
 
+
+![N|Solid](https://github.com/ankita0811/PostgresqlConf/blob/master/database_buffers.png?raw=true)
+
+Instance Health Metrics
+
+![N|Solid](https://github.com/ankita0811/PostgresqlConf/blob/master/instancehealth.png?raw=true)
 ### Tenant-Based-Logging
 
 Multitenant-Postgresql-as-a-Service supports tenant based logging for troubleshooting. Tenant database logs are pushed to a centralized system, enabling dev ops to debug any issue irrespective of instance availability.
