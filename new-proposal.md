@@ -1,4 +1,4 @@
-### Multi-Tenant-PostgreSQL-as-a-service in SAP Cloud PLatform
+### Multi-Tenant-PostgreSQL-as-a-Service in SAP Cloud PLatform
 
 SAP Cloud Platform is an open platform-as-a-service (PaaS) product that provides core platform and backing services, for building and extending cloud applications on multiple cloud infrastructure providers.
 
@@ -44,7 +44,7 @@ Instance Health Metrics
 ![N|Solid](https://github.com/ankita0811/PostgresqlConf/blob/master/instancehealth.png?raw=true)
 ### Tenant-Based-Logging
 
-Multitenant-Postgresql-as-a-Service supports tenant based logging for troubleshooting. Tenant database logs are pushed to a centralized system, enabling dev ops to debug any issue irrespective of instance availability.
+Multitenant-Postgresql-as-a-Service supports tenant based logging for audit and troubleshooting purposes. Tenant database logs are pushed to a centralized system, enabling dev ops to debug any issue irrespective of instance availability.
 
 ### Alerting
 
