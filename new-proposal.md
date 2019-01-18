@@ -8,6 +8,9 @@ SCP manages more than 2400 MT-PostgreSQL-as-a-Service instances across multiple 
 
 MT-PostgreSQL-as-a-Service is materialized in SCP by defining database as the Multi-Tenant-Unit(MTU) whereby each tenant is encapsulated into a database. Logical dbs in PostgreSQL provides clear advantages like isolation, extension enablement, connection control, higher security which makes it the ideal choice as MTU.
 
+### Multi-Tenant-Postgresql-as-a-Service - Cluster Setup
+![N|Solid](https://github.com/ankita0811/PostgresqlConf/blob/master/clustersetup.png?raw=true)
+
 ### Security and Isolation
 A separate membership role is created for each tenant database. Cloud applications are provided with separate username and password to access tenant databases. Tenant users are only entitled to connect to their own database. Privileges for database and role creation are not provided to tenant users.
  
